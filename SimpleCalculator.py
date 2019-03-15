@@ -55,7 +55,7 @@ def test():
     
 
 def menu():
-    print("Simple Calculator v 1.1")
+    print("Simple Calculator v 1.2")
     print("Designed by Zhiting")
     print("---------------------------------")
     print("1. Add")
