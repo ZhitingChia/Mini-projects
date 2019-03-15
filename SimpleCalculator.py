@@ -1,6 +1,9 @@
-# Simple calculator
+# Simple calculator v1.2
 # Author: Chia Zhi Ting
 # Created on 13/3/2019
+
+#This calculator program allows you to perform basic computations on two numbers
+# as well as to convert a decimal number to its binary equivalent.
 
 import math
 
@@ -30,13 +33,26 @@ def add(x,y):
     value=x+y
     print(str(value)+'.')
 
-#A function to test the individual fucntions   
+#This function calculates the binary equivalent  
+def getBinary(x,y):
+    print("The "+str(y)+"-bit binary equivalent of "+str(x)+" is ",end=' ')
+    for i in range(y-1,-1,-1):
+        #print(i)
+        print((x>>i)&1,end='')
+    print()
+
+#A function to test the individual functions   
 def test():
     multiply(3,4)
     getSqrt(169)
     subtract(21,14)
     divide(21,7)
     add(14,16)
+    getBinary(231,8)
+    getBinary(1,8)
+    getBinary(10,8)
+    getBinary(7,8)
+    
 
 def menu():
     print("Simple Calculator v 1.1")
@@ -47,6 +63,7 @@ def menu():
     print("3. Divide")
     print("4. Multiply")
     print("5. Square root")
+    print("6. Get binary")
     print("9. Quit")
     option=input("Your option:")
     return option
@@ -78,13 +95,21 @@ def run():
         elif option==5:
             num=input("Enter the number:")
             getSqrt(float(num))
+            
+        elif option==6:
+            num=input("Enter the number to be converted to binary:")
+            bits=input("Enter no. of bits:")
+            getBinary(int(num),int(bits))
+            
         elif option==9:
             print("Successfully quit simple calculator.")
+            
         else:
                 print("Invalid option")
 
         print()
 
+#test()
 run()
         
 
