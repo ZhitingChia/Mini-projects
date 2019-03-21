@@ -53,10 +53,11 @@ def run():
         elif choice =='3':
             read()
         elif choice =='4':
-            exit()
+            print("Successfully quit")
+            break
         else:
             print("Invalid input! Please enter your choice (1-4): ")
-
+    
 
 run()
-            
+       
