@@ -1,6 +1,5 @@
-#This program creates user logins and then
-#allows them to loginto the system
-#the system will display the time they loggeed in too
+#This program creates user logins and allows them to log into the system.
+#The system will also display the time they logged in.
 
 #Author: Chia Zhi Ting
 #Version 1.0
